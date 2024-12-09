@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vehicle Number Input</title>
+  <link rel="stylesheet" href="../static/css/car-info.css">
+  <link rel="stylesheet" href="../static/css/index.css">
+</head>
+<body>
+  <main>
+    <button class="back-btn">뒤로가기</button>
+    <div class="container">
+      <div class="logo"><img src="../static/images/svg/logo.svg" /></div>
+      <p class="instruction">차량 번호를 입력해주세요</p>
+      <div class="input-box">
+        <div class="digit"></div>
+        <div class="digit"></div>
+        <div class="digit"></div>
+        <div class="digit"></div>
+        <div class="digit"></div>
+        <div class="digit"></div>
+      </div>
+      <div class="keypad">
+        <button class="key">1</button>
+        <button class="key">2</button>
+        <button class="key">3</button>
+        <button class="key">4</button>
+        <button class="key">5</button>
+        <button class="key">6</button>
+        <button class="key">7</button>
+        <button class="key">8</button>
+        <button class="key">9</button>
+        <button class="key delete">×</button>
+        <button class="key">0</button>
+        <button class="key submit">→</button>
+      </div>
+    </div>
+  </main>
+  <script src="../static/js/car-info.js"></script>
+  <script>
+    const keys = document.querySelectorAll('.key');
+    const digits = document.querySelectorAll('.digit');
+    let inputIndex = 0;
+
+    keys.forEach((key) => {
+      key.addEventListener('click', () => {
+        const value = key.textContent;
+
+        if (value === '×') {
+          // 삭제 버튼
+          if (inputIndex > 0) {
+            inputIndex--;
+            digits[inputIndex].textContent = '';
+            digits[inputIndex].removeAttribute('data-value');
+            digits[inputIndex].classList.remove('active');
+          }
+        } else if (value === '→') {
+          // 제출 버튼 (데이터 전송 로직 추가)
+          alert('번호 제출 완료!');
+        } else {
+          // 숫자 입력
+          if (inputIndex < digits.length) {
+            digits[inputIndex].textContent = value;
+            digits[inputIndex].setAttribute('data-value', value);
+            digits[inputIndex].classList.add('active');
+            inputIndex++;
+          }
+        }
+      });
+    });
+  </script>
+</body>
+</html>

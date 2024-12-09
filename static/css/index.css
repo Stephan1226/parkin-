@@ -1,0 +1,27 @@
+/*@import './fonts.css';*/
+
+body {
+    margin: 0 auto;
+    background-color: #FFF;
+    color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    text-align: center;
+    font-family: 'Pretendard', sans-serif;
+    cursor: none;
+}
+
+.hideen {
+    display: none;
+}
+
+h2{
+    font-family: "Pretendard";
+    font-size: 32px;
+}
+
+p{
+    margin: 0;
+}

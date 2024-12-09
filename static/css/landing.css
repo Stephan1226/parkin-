@@ -1,0 +1,43 @@
+body {
+    -webkit-user-select:none;
+    -moz-user-select:none;
+    -ms-user-select:none;
+    user-select:none
+}
+
+.sales-text {
+    font-size: 38px;
+    margin: 0px;
+}
+
+.start-btn {
+    background-color: #293BFF;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 16px 70px;
+    font-size: 28px;
+}
+
+.start-btn:hover {
+    background-color: #4D5CFF;
+}
+
+.Logo-Texts {
+    font-family: sans-serif;
+    padding: 0px;
+    margin: 0px;
+    height: 93px;
+    width: 173px;
+    gap: 0px;
+}
+
+.LogoDiv {
+    margin-bottom: 200px;
+}
+
+.logo-text {
+    font-weight: bold;
+    font-size: 40px;
+    color: #293BFF;
+}
